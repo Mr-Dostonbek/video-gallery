@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="gallery-container">
+        <video class="slider" autoplay muted loop>
+            <source src="videos/video-1.mp4" type="video/mp4">
+        </video>
+        <ul class="navigation">
+            <li>
+                <img onclick="imageUrl('videos/video-1.mp4')" src="images/video-1jpg.png" alt="img-1">
+            </li>
+            <li>
+                <img onclick="imageUrl('videos/video-2.mp4')" src="images/video-2jpg.png" alt="img-2">
+            </li>
+            <li>
+                <img onclick="imageUrl('videos/video-3.mp4')" src="images/video-3jpg.png" alt="img-3">
+            </li>
+            <li>
+                <img onclick="imageUrl('videos/video-4.mp4')" src="images/video-4jpg.png" alt="img-4">
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        function imageUrl(urlImage){
+            slider.src = urlImage;
+        }
+    </script>
+</body>
+</html>
