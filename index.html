@@ -9,6 +9,9 @@
 </head>
 <body>
     <section class="gallery-container">
+        <div class="video-loader">
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        </div>
         <video class="slider" autoplay muted loop>
             <source src="videos/video-1.mp4" type="video/mp4">
         </video>
@@ -29,10 +32,23 @@
     </section>
 
     <script>
-        const slider = document.querySelector('.slider');
+        const slider = document.querySelector('.slider'),
+              videoLoader = document.querySelector('.video-loader');
         function imageUrl(urlImage){
             slider.src = urlImage;
+            // setTimeout(() => {
+            // videoLoader.style.opacity = '0';
+            //     setTimeout(() => {
+            //         videoLoader.style.display = "none";
+            //     }, 500);
+            // }, 2000);
         }
+        setTimeout(() => {
+            videoLoader.style.opacity = '0';
+                setTimeout(() => {
+                    videoLoader.style.display = "none";
+                }, 500);
+            }, 2000);
     </script>
 </body>
 </html>
